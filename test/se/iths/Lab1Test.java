@@ -52,7 +52,7 @@ public class Lab1Test {
 	@Test 
 	public void testQuote() {
 		Lab1 Roger = new Lab1();
-		// innan forloopen måste detta skrivas
+		// innan forloopen mÃ¥ste detta skrivas
 		boolean firstFound = false;
 		boolean secondFound = false;
 		boolean thirdFound = false;
@@ -94,11 +94,11 @@ public class Lab1Test {
 		assertTrue("Should have found qoute from Douglas Adams", seventhFound);
 		assertTrue("Should have found quote from William Shakespeare", eighthFound);
 	}
-	@Test
-	public void testCallcounter(){
-	Lab1 Roger = new Lab1();
-	int callResult = Roger.getCounter();
-	System.out.println(callResult);
+	@After
+	public void getCounterTest() {
+		Lab1 Roger = new Lab1();
+		int result = Roger.getCounter();
+		assertEquals(result, 105);
 	}
 	
 	
